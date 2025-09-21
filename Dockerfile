@@ -13,7 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # copy only csproj first for better caching
-COPY Y.E.J_api.csproj ./
+COPY Deploying_Test.csproj ./
 RUN dotnet restore
 
 # now copy the rest
