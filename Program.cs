@@ -153,7 +153,7 @@ else // DEV
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "YEJ API v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Deploying_Test API v1");
         c.RoutePrefix = "swagger";
     });
 

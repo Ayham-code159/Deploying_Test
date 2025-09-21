@@ -18,22 +18,22 @@ namespace Deploying_Test.Helper
             }
 
             // Create a default admin if none exists (use appsettings.json values if you like)
-            var adminEmail = config["Seed:AdminEmail"] ?? "admin@yej.local";
-            var adminPass = config["Seed:AdminPassword"] ?? "Admin123!";
+            //var adminEmail = config["Seed:AdminEmail"] ?? "admin@yej.local";
+            //var adminPass = config["Seed:AdminPassword"] ?? "Admin123!";
 
-            var admin = await userManager.FindByEmailAsync(adminEmail);
-            if (admin is null)
-            {
-                admin = new Owner
-                {
-                    UserName = adminEmail,
-                    Email = adminEmail,
-                    EmailConfirmed = true
-                };
-                var created = await userManager.CreateAsync(admin, adminPass);
-                if (created.Succeeded)
-                    await userManager.AddToRoleAsync(admin, "Admin");
-            }
+            //var admin = await userManager.FindByEmailAsync(adminEmail);
+            //if (admin is null)
+            //{
+            //    admin = new Owner
+            //    {
+            //        UserName = adminEmail,
+            //        Email = adminEmail,
+            //        EmailConfirmed = true
+            //    };
+            //    var created = await userManager.CreateAsync(admin, adminPass);
+            //    if (created.Succeeded)
+            //        await userManager.AddToRoleAsync(admin, "Admin");
+            //}
         }
     }
 
