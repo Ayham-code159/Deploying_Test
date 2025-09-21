@@ -28,4 +28,4 @@ WORKDIR /app
 COPY --from=build /out .
 
 # IMPORTANT: point to your dll name
-ENTRYPOINT ["dotnet", "Y.E.J_api.dll"]
+ENTRYPOINT ["dotnet", "Deploying_Test.dll"]
