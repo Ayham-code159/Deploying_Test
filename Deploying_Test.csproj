@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.7">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -24,8 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Models\Dtos\BookDtos\" />
-    <Folder Include="Models\Dtos\OwnerDtos\" />
-    <Folder Include="MappingProfiles\" />
     <Folder Include="Services\BookService\" />
     <Folder Include="Services\OwnerService\" />
   </ItemGroup>

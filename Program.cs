@@ -1,6 +1,8 @@
 using Deploying_Test.Data;
 using Deploying_Test.Helper;
 using Deploying_Test.Models.Entities;
+using Deploying_Test.Services.BookService;
+using Deploying_Test.Services.OwnerService;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -106,6 +108,14 @@ builder.Services.AddCors(o =>
     });
 });
 
+// services
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IOwnerService, OwnerService>();
+
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+
+
 
 
 
@@ -116,7 +126,7 @@ var app = builder.Build();
 
 if (app.Environment.IsProduction())
 {
-    var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
     app.Urls.Add($"http://0.0.0.0:{port}");
 
     var fh = new ForwardedHeadersOptions
