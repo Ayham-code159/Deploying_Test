@@ -26,7 +26,6 @@
     <Folder Include="Models\Dtos\BookDtos\" />
     <Folder Include="Models\Dtos\OwnerDtos\" />
     <Folder Include="MappingProfiles\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Services\BookService\" />
     <Folder Include="Services\OwnerService\" />
   </ItemGroup>

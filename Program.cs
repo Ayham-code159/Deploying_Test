@@ -116,7 +116,7 @@ var app = builder.Build();
 
 if (app.Environment.IsProduction())
 {
-    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
     app.Urls.Add($"http://0.0.0.0:{port}");
 
     var fh = new ForwardedHeadersOptions
