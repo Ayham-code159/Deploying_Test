@@ -109,6 +109,8 @@ builder.Services.AddCors(o =>
 
 
 
+
+
 ///
 var app = builder.Build();
 
@@ -175,7 +177,7 @@ else // DEV
 }
 
 // Diagnostics
-app.MapGet("/", () => "API is running, Test Test Test");
+app.MapGet("/", () => "API is running, Test3");
 app.MapGet("/health/db", async (ApplicationDbContext db) =>
     await db.Database.CanConnectAsync() ? Results.Ok("DB OK") : Results.StatusCode(500));
 
