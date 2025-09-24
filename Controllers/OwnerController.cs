@@ -55,8 +55,8 @@ namespace Deploying_Test.Controllers
 
 
         [HttpPost("admin/assign-role")]
-        //[Authorize(Roles = "Admin")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
+        
         public async Task<IActionResult> AssignRole([FromQuery] string user, [FromQuery] string role)
         {
             if (string.IsNullOrWhiteSpace(user) || string.IsNullOrWhiteSpace(role))
