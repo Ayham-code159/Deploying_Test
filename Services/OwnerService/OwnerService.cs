@@ -11,14 +11,14 @@ namespace Deploying_Test.Services.OwnerService
     {
         private readonly UserManager<Owner> _userManager;
         private readonly SignInManager<Owner> _signInManager;
-        private readonly RoleManager<Owner> _roleManager;
+        private readonly RoleManager<IdentityRole> _roleManager; // make sure its identityRole not owner
         private readonly IMapper _mapper;
 
 
         public OwnerService(
             UserManager<Owner> userManager,
             SignInManager<Owner> signInManager,
-            RoleManager<Owner> roleManager,
+            RoleManager<IdentityRole> roleManager,
             IMapper mapper)
         {
             _userManager = userManager;
@@ -80,6 +80,8 @@ namespace Deploying_Test.Services.OwnerService
             return (true, null, isCurrent);
 
         }
+
+        /// Ensure role: 
 
 
 

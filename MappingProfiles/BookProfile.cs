@@ -1,9 +1,9 @@
-﻿using AutoMapper;
+﻿//using AutoMapper;
 
-namespace Deploying_Test.MappingProfiles
-{
-    public class BookProfile : Profile
-    {
+//namespace Deploying_Test.MappingProfiles
+//{
+//    public class BookProfile : Profile
+//    {
 
-    }
-}
+//    }
+//}
