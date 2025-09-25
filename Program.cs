@@ -41,7 +41,6 @@ builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
     });
 });
 
-
 // ----------------- Identity / Cookie -----------------
 builder.Services
     .AddIdentity<Owner, IdentityRole>(o =>
@@ -75,7 +74,6 @@ builder.Services.ConfigureApplicationCookie(opt =>
     opt.Events.OnRedirectToLogin = ctx => { ctx.Response.StatusCode = StatusCodes.Status401Unauthorized; return Task.CompletedTask; };
     opt.Events.OnRedirectToAccessDenied = ctx => { ctx.Response.StatusCode = StatusCodes.Status403Forbidden; return Task.CompletedTask; };
 });
-
 
 // ----------------- CORS -----------------
 var allowed = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ??
@@ -114,12 +112,6 @@ builder.Services.AddScoped<IOwnerService, OwnerService>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
-
-
-
-
-
-
 
 ///
 var app = builder.Build();
@@ -171,15 +163,6 @@ else // DEV
 
     app.UseHttpsRedirection();
 
-    // endpoint routing
-    app.UseRouting();
-
-    // CORS after routing and before auth
-    app.UseCors("api");
-
-    app.UseAuthentication();
-    app.UseAuthorization();
-
     app.MapControllers();
 
     // helpful in dev too
@@ -202,6 +185,4 @@ if (runMigrationsOnStart)
     await IdentitySeed.SeedAsync(svcs, app.Configuration);
 }
 
-await app.RunAsync();     
-
-
+await app.RunAsync();
