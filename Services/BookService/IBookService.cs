@@ -1,31 +1,31 @@
-﻿//using Deploying_Test.Models.Dtos.BookDtos;
-//using System.Security.Claims;
+﻿using Deploying_Test.Models.Dtos.BookDtos;
+using System.Security.Claims;
 
-//namespace Deploying_Test.Services.BookService
-//{
-//    public interface IBookService
-//    {
-//        /// create
+namespace Deploying_Test.Services.BookService
+{
+    public interface IBookService
+    {
+        ///// create
 
-//        Task<BookDto> AddBookAsync(ClaimsPrincipal user, CreateBookDto dto);
-//        Task<IEnumerable<BookDto>> AddBooksAsync(ClaimsPrincipal user, IEnumerable<CreateBookDto> dtos);
+        //Task<BookDto> AddBookAsync(ClaimsPrincipal user, CreateBookDto dto);
+        //Task<IEnumerable<BookDto>> AddBooksAsync(ClaimsPrincipal user, IEnumerable<CreateBookDto> dtos);
 
-//        /// Read
+        ///// Read
 
-//        Task<List<BookDto>> GetAllBooksAsync(ClaimsPrincipal user);
-//        Task<BookDto?> GetBookByNameAsync(ClaimsPrincipal user, string name);
+        //Task<List<BookDto>> GetAllBooksAsync(ClaimsPrincipal user);
+        //Task<BookDto?> GetBookByNameAsync(ClaimsPrincipal user, string name);
 
-//        /// update
-        
-//        Task<BookDto?> UpdateBookAsync(ClaimsPrincipal user , string name , UpdateBookDto dto);
+        ///// update
 
-//        /// delete
+        //Task<BookDto?> UpdateBookAsync(ClaimsPrincipal user, string name, UpdateBookDto dto);
 
-//        Task<bool> DeleteBookAsync(ClaimsPrincipal user , string name);
+        ///// delete
 
-//        /// finished status
+        //Task<bool> DeleteBookAsync(ClaimsPrincipal user, string name);
 
-//        Task<bool> MarkAsFinishedAsync(ClaimsPrincipal user, string name);
-//        Task<bool> UnMarkAsFinishedAsync(ClaimsPrincipal user , string name); 
-//    }
-//}
+        ///// finished status
+
+        //Task<bool> MarkAsFinishedAsync(ClaimsPrincipal user, string name);
+        //Task<bool> UnMarkAsFinishedAsync(ClaimsPrincipal user, string name);
+    }
+}
