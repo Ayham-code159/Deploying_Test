@@ -25,7 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Dtos\BookDtos\" />
     <Folder Include="Services\BookService\" />
     <Folder Include="Services\OwnerService\" />
   </ItemGroup>
